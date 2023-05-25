@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="">
+</head>
+<style>
+    .contaner{
+        width: 100%;
+       height: 100vh;
+       display: flex;
+       flex-wrap: wrap;
+      
+
+    }
+    .contaner .fotos{
+        width: 10%;
+        display: flex;
+      gap: 5px;
+        height: 80vh;
+        flex-direction: column;
+      
+         
+    }
+    .contaner .fotos img{
+        width:100%;
+
+    }
+    .contaner #foto{
+        width: 60%;
+        height:60%;
+        margin: auto;
+        display: flex;
+      
+     
+    } 
+    .contaner #foto img{
+        width: 100%;
+        height: 100%;
+
+    } 
+</style>
+<body>
+<div class="contaner" >
+    <div class="fotos" id="container">
+        <img id="one" src="1.jpg" alt="">
+        <img id="tow" src="2.jpg" alt="">
+        <img id="tree" src="12.jpg" alt="">
+        <img id="four" src="4.jpg" alt="">
+        <img id="five" src="5.jfif" alt="">
+        <img id="six" src="6.jpg" alt="">
+        <img id="seven" src="7.jpg" alt="">
+        <img id="eight" src="8.jpg" alt="">
+    </div>
+    <div  id="foto">
+        
+    </div>
+</div>
+
+    <script >
+  
+ let foto      = document.getElementById('foto') 
+ let fotosList = document.querySelector('#container')
+ let img       = document.createElement('img')
+     foto.append(img)
+     fotosList = Array.from(fotosList.children)
+     fotosList.forEach(element => { 
+      element.addEventListener('click' , (e)=>{
+       img.src = ''
+       img.src = e.target.src
+          })
+});
+
+
+    </script>
+</body>
+</html>
